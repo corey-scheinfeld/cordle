@@ -13,7 +13,7 @@ export default function WordGrid({ grid, themes }) {
       width: 50,  
       border: '3px solid',
       borderColor: letter.color == "white" ? "rgb(133, 128, 128)" : letter.color,
-      fontSize:50,
+      fontSize:40,
     });
   };
 
