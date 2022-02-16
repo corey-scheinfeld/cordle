@@ -14,7 +14,7 @@ export default function KeyBoard({guess, setGuess, setEdit, attempts, themes}){
         if((button == "{bksp}" && guess.length !=0)|| button == "{enter}"){
             setEdit(button);
         }
-        else if(guess.length < 5){
+        else if(guess.length < 5 && guess.length > 0){
             setGuess([...guess, button]);
         }
     }
