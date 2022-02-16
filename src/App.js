@@ -131,9 +131,9 @@ function App() {
   return (
     <div className="App">
       <h1>CORDLE</h1>
-      <h2>{err? "Not A Valid Word": win? "Excellent!": guess.length == 6 ? "Try again tommorow!": "A Corey Wordle"}</h2>
+      <h2>{err? "Not A Valid Word": win? "Excellent!": attempts.length == 6 ? "Try again tommorow!": "A Corey Wordle"}</h2>
       <WordGrid grid = {grid} themes={themes}/>
-      <div style={{width: '100%', margin:'auto', marginTop:10, marginBottom:100}}>
+      <div style={{width: '100%', margin:'auto', marginTop:10}}>
         <KeyBoard guess = {guess} setGuess = {setGuess} attempts = {attempts} setEdit = {setEdit} themes = {themes}/>
       </div>
       
