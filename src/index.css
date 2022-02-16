@@ -26,25 +26,25 @@ code {
 .simple-keyboard.hg-layout-default .hg-button.blank0 {
   background: rgb(255, 254, 254);
   color: black;
-  height: 100px;
+  height: 60px;
 }
 
 .simple-keyboard.hg-layout-default .hg-button.guessed1 {
   background: rgb(133, 128, 128);
   color: black;
-  height: 100px;
+  height: 60px;
 }
 
 .simple-keyboard.hg-layout-default .hg-button.included2 {
   background: rgb(209, 184, 40);
   color: black;
-  height: 100px;
+  height: 60px;
 }
 
 .simple-keyboard.hg-layout-default .hg-button.correct3 {
   background: rgb(31, 156, 48);
   color: black;
-  height: 100px;
+  height: 60px;
 }
 
 .simple-keyboard.hg-layout-default .hg-button.hg-highlight {
