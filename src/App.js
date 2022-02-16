@@ -48,6 +48,7 @@ function App() {
     [{color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}],
     [{color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}],
     [{color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}],
+    [{color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}, {color: "white", value:null}],
   ]);
 
   useEffect(() => {
