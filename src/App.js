@@ -1,11 +1,8 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 import React, { useState, useEffect, useRef } from "react";
 import WordGrid from './WordGrid.js';
 import KeyBoard from './KeyBoard.js';
-import { isCursorAtStart } from '@testing-library/user-event/dist/utils';
-import { withTheme } from '@emotion/react';
-import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import wordList from "./wordList.json";
 
