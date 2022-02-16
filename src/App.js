@@ -120,7 +120,7 @@ function App() {
 
     setThemes(curr_themes);
 
-    if(entry.join('') == word){
+    if(entry.join("") == word){
       console.log("win!");
       setWin(true);
     }
