@@ -20,7 +20,7 @@ export default function KeyBoard({guess, setGuess, setEdit, attempts, themes}){
     }
 
     const display = {
-        '{bksp}': 'backspace',
+        '{bksp}': 'back',
         '{enter}': 'enter',
     }
 
