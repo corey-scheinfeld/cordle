@@ -15,8 +15,8 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function WordGrid() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-      {Array(6).fill(0).map((i) => {
+      <Grid container spacing={2} xs={6}>
+      {Array(30).fill(0).map((i) => {
         return(
             <Grid item xs={2}>
                 <Item>i</Item>
