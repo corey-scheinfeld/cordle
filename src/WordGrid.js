@@ -16,7 +16,7 @@ export default function FullWidthGrid() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2} columns={5}>
-      {range(0, 6).map((i) => {
+      {Array(6).fill(0).map((i) => {
         return(
             <Grid item xs={6} md={8}>
                 <Item>i</Item>
