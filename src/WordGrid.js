@@ -15,10 +15,10 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function WordGrid() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2} columns={5}>
+      <Grid container spacing={2}>
       {Array(6).fill(0).map((i) => {
         return(
-            <Grid item xs={6} md={8}>
+            <Grid item xs={2}>
                 <Item>i</Item>
             </Grid>
             );
