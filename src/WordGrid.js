@@ -9,8 +9,8 @@ export default function WordGrid({ grid, themes }) {
   const cellStyle = (letter) => {
     return({
       backgroundColor: letter.color, 
-      height: 60,
-      width: 60,  
+      height: 50,
+      width: 50,  
       border: '3px solid',
       borderColor: letter.color == "white" ? "rgb(133, 128, 128)" : letter.color,
       fontSize:50,
@@ -20,7 +20,7 @@ export default function WordGrid({ grid, themes }) {
 
   return (
 
-    <div style={{ display: 'inline-block', height:200 }}>
+    <div style={{ display: 'inline-block'}}>
       <div
         style={{
           display: 'grid',    
