@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect, useRef } from "react";
-import wordGrid from './wordGrid.js';
+import WordGrid from './WordGrid.js';
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <h1>Cordle</h1>
-      <wordGrid/>
+      <WordGrid></WordGrid>
     </div>
   );
 }
