@@ -1,29 +1,43 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import { render } from "@testing-library/react";
+import React, { useState, useEffect, useRef } from "react";
+import ReactDataGrid from 'fixed-react-data-grid';
+import { calculateNewValue } from "@testing-library/user-event/dist/utils";
+ 
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+export default function WordGrid({ grid, themes }) {
 
-export default function WordGrid() {
+  const cellStyle = (letter) => {
+    return({
+      backgroundColor: letter.color, 
+      height: 60,
+      width: 60,  
+      border: '3px solid',
+      borderColor: letter.color == "white" ? "rgb(133, 128, 128)" : letter.color,
+      fontSize:50,
+    });
+  };
+
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2} xs={6}>
-      {Array(30).fill(0).map((i) => {
-        return(
-            <Grid item xs={2}>
-                <Item>i</Item>
-            </Grid>
+
+    <div style={{ display: 'inline-block' }}>
+      <div
+        style={{
+          display: 'grid',    
+          gridTemplateRows: `repeat(${grid.length}, 1fr)`,
+          gridTemplateColumns: `repeat(${grid[0].length}, 1fr)`,
+          gridGap: 10,
+        }}
+      >
+        {grid.map((row, rowIdx) =>
+          row.map((cell, colIdx) => {
+            return(
+              <div key = {rowIdx.toString().concat(", ", colIdx.toString())} style={cellStyle(cell)}>{cell.value?cell.value.toUpperCase():cell.value}</div>
             );
-      })}
-      </Grid>
-    </Box>
-  );
+          })
+        )}
+      </div>
+    </div>
+  )
 }
+
