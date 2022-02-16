@@ -11,10 +11,12 @@ export default function KeyBoard({guess, setGuess, setEdit, attempts, themes}){
     }
 
     const onKeyPress = (button) => {
-        if((button == "{bksp}" && guess.length !=0)|| button == "{enter}"){
-            setEdit(button);
+        if(button == "{bksp}"|| button == "{enter}"){
+            if(guess.length !=0){
+                setEdit(button);
+            }
         }
-        else if(guess.length < 5 && guess.length > 0){
+        else if(guess.length < 5){
             setGuess([...guess, button]);
         }
     }
