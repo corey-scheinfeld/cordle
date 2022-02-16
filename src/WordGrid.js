@@ -20,7 +20,7 @@ export default function WordGrid({ grid, themes }) {
 
   return (
 
-    <div style={{ display: 'inline-block', height:400 }}>
+    <div style={{ display: 'inline-block', height:200 }}>
       <div
         style={{
           display: 'grid',    
