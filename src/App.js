@@ -167,7 +167,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" style = {{marginBottom: 10}}>
       <h1>CORDLE</h1>
       <h2>
         {err

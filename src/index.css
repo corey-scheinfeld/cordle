@@ -18,7 +18,7 @@ code {
 
 .simple-keyboard.hg-theme-default.myTheme {
   border-radius: 10px;
-  margin: 10px;
+  margin: auto;
   background: white;
   width: calc(100% - 20px);
 }
