@@ -8,7 +8,6 @@ const ShareModal = ({ isVisible, hideModal, grid }) => {
       navigator.clipboard.writeText(grid);
       alert("Copied to clipboard \n" + grid);
     }
-    hideModal();
   };
   return (
     <>
