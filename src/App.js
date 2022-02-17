@@ -8,7 +8,7 @@ import wordList from "./wordList.json";
 
 
 function App() {
-  const [word, setWord] = useState("yerba");
+  const [word, setWord] = useState("bench");
   const [guess, setGuess] = useState([]);
   const [err, setErr] = useState(false);
   const [win, setWin] = useState(false);
