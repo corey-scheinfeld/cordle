@@ -132,14 +132,11 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App" style = {{marginBottom: 10}}>
       <h1>CORDLE</h1>
       <h2>{err? "Not A Valid Word": win? "Excellent!": attempts == 6 ? "Try again tommorow!": "A Corey Wordle"}</h2>
       <WordGrid grid = {grid} themes={themes}/>
-      <div style={{width: '100%', margin:'auto', marginTop:10}}>
-        <KeyBoard guess = {guess} setGuess = {setGuess} attempts = {attempts} setEdit = {setEdit} themes = {themes}/>
-      </div>
-      
+      <KeyBoard guess = {guess} setGuess = {setGuess} attempts = {attempts} setEdit = {setEdit} themes = {themes}/>
     </div>
   );
 }
