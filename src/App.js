@@ -91,32 +91,35 @@ function App() {
     
 	} , [edit]);
 
+ const count = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+
  const checkEntry = (entry) => {
     const curr_themes = [...themes];
     const curr_grid = [...grid];
-    
+    let letter_history = [];
+
+    const counts = {};
+    word.split("").forEach((letter) => {
+        counts[letter] = (counts[letter] || 0) + 1;
+      });
+
     entry.map((letter, index)=>{
-      const history = parseInt(curr_themes.find(set => set.buttons.includes(letter)).class.slice(-1));
-
-      if(word[index] == letter && history != 3){
+      //const theme_history = parseInt(curr_themes.find(set => set.buttons.includes(letter)).class.slice(-1));
+      
+      if(word[index] == letter){
         curr_themes[3].buttons+=(letter+" ");
-        curr_themes[history].buttons.replace(letter+" ", '');
-
         curr_grid[attempts][index].color = 'rgb(31, 156, 48)';
       }
-      else if(word.includes(letter) && history < 2){
-        curr_themes[2].buttons+=(letter+" ");
-        curr_themes[history].buttons.replace(letter.concat(" "), '');
-
-        curr_grid[attempts][index].color = 'rgb(209, 184, 40)';
+      else if(word.includes(letter) && ((!letter_history.includes(letter) && !(entry[word.indexOf(letter)] == letter))  || counts[letter] > 1 )){
+          curr_themes[2].buttons+=(letter+" ");
+          curr_grid[attempts][index].color = 'rgb(209, 184, 40)';
       }
-      else if(history == 0){
+      else{
         curr_themes[1].buttons+=(letter+" ");
-        curr_themes[0].buttons.replace((letter+" "), '');
-
         curr_grid[attempts][index].color = 'rgb(133, 128, 128)';
       }
 
+      letter_history.push(letter);
     });
 
     setThemes(curr_themes);
