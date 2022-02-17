@@ -11,7 +11,7 @@ function App() {
   const [guess, setGuess] = useState([]);
   const [err, setErr] = useState(false);
   const [win, setWin] = useState(false);
-  const [emojis, setEmojis] = useState(`Cordle`);
+  const [emojis, setEmojis] = useState("");
   const [isModalOpen, setModalOpen] = useState(false);
 
   const [edit, setEdit] = useState("");
@@ -183,7 +183,7 @@ function App() {
         <ShareModal
           isVisible={isModalOpen}
           hideModal={() => setModalOpen(false)}
-          grid={emojis}
+          grid={`Cordle ${attempts}/6 \n` + emojis}
         />
         <KeyBoard
           guess={guess}
