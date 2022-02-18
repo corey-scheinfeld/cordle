@@ -5,6 +5,7 @@ const ShareModal = ({ isVisible, hideModal, grid }) => {
     console.log(navigator.share);
     if (navigator.share) {
       await navigator.share(grid);
+      console.log("in share");
     } else {
       navigator.clipboard.writeText(grid);
       alert("Copied to clipboard \n" + grid);
