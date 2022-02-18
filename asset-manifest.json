@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/cordle/static/css/main.4d5469a0.css",
-    "main.js": "/cordle/static/js/main.54648479.js",
+    "main.js": "/cordle/static/js/main.33c1a350.js",
     "static/js/787.9b32010f.chunk.js": "/cordle/static/js/787.9b32010f.chunk.js",
     "static/media/logo.png": "/cordle/static/media/logo.425685cf21f4fd09965d.png",
     "index.html": "/cordle/index.html",
     "main.4d5469a0.css.map": "/cordle/static/css/main.4d5469a0.css.map",
-    "main.54648479.js.map": "/cordle/static/js/main.54648479.js.map",
+    "main.33c1a350.js.map": "/cordle/static/js/main.33c1a350.js.map",
     "787.9b32010f.chunk.js.map": "/cordle/static/js/787.9b32010f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d5469a0.css",
-    "static/js/main.54648479.js"
+    "static/js/main.33c1a350.js"
   ]
 }
