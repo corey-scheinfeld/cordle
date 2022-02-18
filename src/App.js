@@ -117,7 +117,7 @@ function App() {
     }
   }, [edit]);
 
-  const emojiMap = ["😳", "🙄", "🥳"];
+  const emojiMap = ["🕸", "✏️", "💎"];
   const checkEntry = (entry) => {
     const emojiRow = [];
     const curr_themes = [...themes];
