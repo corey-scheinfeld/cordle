@@ -1,8 +1,6 @@
 const ShareModal = ({ isVisible, hideModal, grid }) => {
   const onShareClick = async (e) => {
     e.stopPropagation();
-    console.log(grid);
-    console.log(navigator.share);
     if (navigator.share) {
       console.log("in share");
       await navigator.share({
