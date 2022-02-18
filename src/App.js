@@ -168,8 +168,9 @@ function App() {
 
   return (
     <div className="App" style = {{marginBottom: 10}}>
-      <h1>CORDLE</h1>
-      <h2>
+      <h1 style={{marginBottom: 0}}>CORDLE</h1>
+      <div style ={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 10}}> 
+      <h2 style={{ marginTop: 15, marginBottom: 15, display:'inline'}}>
         {err
           ? "Not A Valid Word"
           : win
@@ -178,13 +179,16 @@ function App() {
           ? "Try again tommorow!"
           : "A Corey Wordle"}
       </h2>
+      {win
+        ? <ShareModal
+            isVisible={isModalOpen}
+            hideModal={() => setModalOpen(false)}
+            grid={`Cordle ${attempts}/6 \n` + emojis}
+          />
+        : null}
+      </div>
       <WordGrid grid={grid} themes={themes} />
       <div style={{ width: "100%", margin: "auto", marginTop: 10 }}>
-        <ShareModal
-          isVisible={isModalOpen}
-          hideModal={() => setModalOpen(false)}
-          grid={`Cordle ${attempts}/6 \n` + emojis}
-        />
         <KeyBoard
           guess={guess}
           setGuess={setGuess}
