@@ -2,9 +2,9 @@ const ShareModal = ({ isVisible, hideModal, grid }) => {
   const onShareClick = async (e) => {
     e.stopPropagation();
     console.log(grid);
+    console.log(navigator.share);
     if (navigator.share) {
-      navigator.clipboard.writeText(grid);
-      alert("Copied to clipboard \n" + grid);
+      await navigator.share(grid);
     } else {
       navigator.clipboard.writeText(grid);
       alert("Copied to clipboard \n" + grid);
