@@ -8,6 +8,7 @@ export default function KeyBoard({
   setEdit,
   attempts,
   themes,
+  win
 }) {
   const onChange = (input) => {
     console.log("Input changed", input);
@@ -18,7 +19,7 @@ export default function KeyBoard({
       if (guess.length != 0) {
         setEdit(button);
       }
-    } else if (guess.length < 5) {
+    } else if (guess.length < 5 && !win) {
       setGuess([...guess, button]);
     }
   };

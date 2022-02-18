@@ -195,6 +195,7 @@ function App() {
           attempts={attempts}
           setEdit={setEdit}
           themes={themes}
+          win = {win}
         />
       </div>
     </div>
