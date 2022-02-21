@@ -7,7 +7,7 @@ import wordList from "./wordList.json";
 import ShareModal from "./ShareModal";
 
 function App() {
-  const [word, setWord] = useState("bacon");
+  const [word, setWord] = useState("clash");
   const [guess, setGuess] = useState([]);
   const [err, setErr] = useState(false);
   const [win, setWin] = useState(false);
