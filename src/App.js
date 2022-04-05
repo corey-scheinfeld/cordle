@@ -1,13 +1,14 @@
 import logo from "./logo.png";
 import "./App.css";
 import React, { useState, useEffect, useRef } from "react";
+import schedule from "node-schedule";
 import WordGrid from "./WordGrid.js";
 import KeyBoard from "./KeyBoard.js";
 import wordList from "./wordList.json";
 import ShareModal from "./ShareModal";
 
 function App() {
-  const [word, setWord] = useState("coder");
+  const [word, setWord] = useState();
   const [guess, setGuess] = useState([]);
   const [err, setErr] = useState(false);
   const [win, setWin] = useState(false);
@@ -85,6 +86,14 @@ function App() {
   ]);
 
   useEffect(() => {
+    let date = new Date();
+    let dateIndex = Math.floor((date.getTime() /  86400000) - 19087);
+
+    setWord(wordList[dateIndex]);
+    
+  }, []);
+
+  useEffect(() => {
     let curr = [...grid];
 
     if (guess.length != 0) {
@@ -96,6 +105,7 @@ function App() {
 
   useEffect(() => {
     let curr = [...grid];
+    
 
     if (edit == "{bksp}") {
       curr[attempts][guess.length - 1].value = null;
